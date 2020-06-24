@@ -15,5 +15,21 @@ package frc.robot;
  * <p>It is advised to statically import this class (or one of its inner classes) wherever the
  * constants are needed, to reduce verbosity.
  */
-public final class Constants {
+public final class RobotMap {
+
+    public static int leftDriveID1 = 4;
+    public static int leftDriveID2 = 5;
+    public static int leftDriveID3 = 6;
+    public static int rightDriveID1 = 1;
+    public static int rightDriveID2 = 2;
+    public static int rightDriveID3 = 3;
+
+
+    public static int leftSwerveID1 = 4;
+    public static int leftSwerveID2 = 5;
+    public static int leftSwerveID3 = 6;
+    public static int rightSwerveID1 = 1;
+    public static int rightSwerveID2 = 2;
+    public static int rightSwerveID3 = 3;
+    
 }
