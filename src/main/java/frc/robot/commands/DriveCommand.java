@@ -7,8 +7,13 @@
 
 package frc.robot.commands;
 
+import frc.robot.Controllers;
 import frc.robot.RobotContainer;
 import frc.robot.subsystems.DriveSubsystem;
+
+import com.ctre.phoenix.motorcontrol.ControlMode;
+
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 /**
@@ -16,6 +21,11 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
  */
 public class DriveCommand extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
+
+
+  Joystick drive = new Joystick(0);
+  Joystick swerve = new Joystick(1);
+
 
   /**
    * Creates a new ExampleCommand.
@@ -35,6 +45,12 @@ public class DriveCommand extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
+
+    Controllers.leftDrive1.set(ControlMode.PercentOutput,drive.getY());
+    Controllers.leftSwerve1.set(swerve.getY());
+
+
+
   }
 
   // Called once the command ends or is interrupted.
